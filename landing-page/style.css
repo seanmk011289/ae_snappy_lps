@@ -1,0 +1,64 @@
+* {
+    box-sizing:border-box;
+    padding:0;
+    margin:0;
+}
+
+:root {
+    --gradient: linear-gradient(180deg, #C1DBE3, #F0F7EE);
+    --darkBlue: #1E2944;
+    --lightGreen: #799D4C;
+}
+
+body {
+    font-family:"Manrope", sans-serif;
+}
+
+
+
+@media screen and (min-width:1024px) {
+
+    h1 {
+        font-size: 4rem;
+        line-height: 110%;
+    }
+    
+     h5 {
+        font-size: 1.875rem;
+    }
+
+    .hero {
+        padding:5rem 8rem;
+        background:var(--gradient);
+    }
+        .heroLogo {
+            width: 250px;
+        }
+
+    .hero .flex-container {
+        display:flex;
+        margin-top:5rem;
+    }
+
+    .hero h1 {
+        color:var(--darkBlue);
+        font-weight:700;
+    }
+    .hero h5 {
+         color: var(--lightGreen);
+         margin-top:16px;
+    }
+
+    .hero .flex.left {
+        flex: 1.25;
+    }
+    
+    .hero .flex.right {
+         flex: .75;
+    }
+
+    .heroImg {
+        width:100%;
+    }
+    
+}
