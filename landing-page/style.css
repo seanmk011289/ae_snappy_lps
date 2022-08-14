@@ -1,7 +1,13 @@
+/* global */
+
 * {
     box-sizing:border-box;
     padding:0;
     margin:0;
+}
+
+html {
+    background:white;
 }
 
 :root {
@@ -19,40 +25,39 @@ h1, h3, h4, h5 {
     color:var(--darkBlue);
 }
 
-  h1 {
-      font-size: 3.25rem;
-      line-height: 110%;
-  }
+h1 {
+    font-size:2.75rem;
+    line-height:110%;
+}
 
-  h3 {
-      font-size: 1.875rem;
-  }
+@media screen and (min-width:500px) {
+h1 {
+        font-size: 3.25rem;
+        line-height: 110%;
+    }
+}
 
-  h4 {
-      font-size: 1.7rem;
-      font-weight:400;
-  }
 
-  h5 {
-      font-size: 1.5rem;
-  }
+h3 {
+    font-size: 1.875rem;
+}
 
-  textarea {
-      font-family:"Manrope";
-      font-weight:400;
-  }
+h4 {
+    font-size: 1.7rem;
+    font-weight:400;
+}
 
-.greenUnderline {
-    width:85%;
-    margin-top:20px;
+h5 {
+    font-size: 1.5rem;
+}
+
+textarea {
+    font-family:"Manrope";
+    font-weight:400;
 }
 
 li {
     list-style-type: none;
-}
-
-.heroList {
-    margin:16px 0;
 }
 
 .greenBtn {
@@ -63,219 +68,345 @@ li {
     font-family: "Manrope", sans-serif;
     letter-spacing: 1px;
     font-weight: bold;
-    margin:16px auto;
-    display:inline-block;
-    text-decoration:none;
+    margin: 16px auto;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 4px;
 }
-
-.hero .right {
-    text-align:center;
-}
-
-#maxContainer {
-    max-width:1200px;
-    margin:0 auto;
-}
-
-  
-@media screen and (min-width:1020px) {
-    .hero {
-        padding:5rem 8rem;
-        background:var(--gradient);
-    }
-}
-
-.hero {
-    padding: 5rem 2rem;
-    background: var(--gradient);
-    overflow:hidden;
-}
- 
-.heroLogo {
-        width: 250px;
-    }
-
-
 
 .flex-container {
     align-items: center;
 }
 
- @media screen and (min-width:1000px) {
-     .flex-container {
-         display: flex;
-     }
- }
+@media screen and (min-width:1000px) {
+    .flex-container {
+        display: flex;
+    }
+}
+
+.flex {
+    flex: 1;
+}
+
+#maxContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* hero */
+
+.heroLogo {
+    width: 250px;
+}
+
+header {
+    text-align: center;
+}
+
+@media screen and (min-width:1000px) {
+    header {
+        text-align:left;
+    }
+}
+
+.hero {
+    padding: 5rem 1rem;
+    background: var(--gradient);
+    overflow: hidden;
+    position:relative;
+}
+
+@media screen and (min-width:1000px) {
+    .hero {
+        padding: 5rem 5rem;
+        background: var(--gradient);
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .hero .left {
+        margin-bottom:50px;
+        text-align:center;
+    }
+}
+
+.heroList {
+    margin:16px 0;
+}
+
+@media screen and (max-width:1000px){
+    .hero .afterList {
+        max-width:500px;
+        margin:0 auto;
+    }
+}
+
+
+.hero .right {
+    text-align:center;
+}
 
 .hero .flex-container {
     margin-top: 5rem;
 }
-    .flex {
-         flex: 1;
-    }
 
-    .hero h1 {
-        color:var(--darkBlue);
-        font-weight:700;
-    }
+.hero h1 {
+    color:var(--darkBlue);
+    font-weight:700;
+}
 
-    .hero h5 {
-         color: var(--lightGreen);
-         margin-top:16px;
-    }
+.hero h5 {
+        color: var(--lightGreen);
+        margin-top:16px;
+}
 
-    .heroList li, .hero p {
-         font-size: 16px;
-    }
+.heroList li, .hero p {
+        font-size: 16px;
+}
 
-    .heroList li {
-        margin:16px 0 16px 20px;
-    }
+.heroList li {
+    margin:16px 0 16px 20px;
+}
 
-    .heroList li::before {
-        content:url('./images/checkmark-sm.png');
-        position:relative;
-        top:5px;
-        left:-10px;
-    }
+.heroList li::before {
+    content:url('./images/checkmark-sm.png');
+    position:relative;
+    top:5px;
+    left:-10px;
+}
 
-    .free {
-        color:var(--darkBlue);
-        position:relative;
-    }
+.free {
+    color:var(--darkBlue);
+    position:relative;
+}
 
-    .free::after {
-        content:url('./images/squiggle.svg');
-        position:absolute;
-       top:80%;
-       transform:scale(0.4);
-       left:-55%;
-    }
-
-    .heroImg {
-        width:100%;
-    }
-
-    @media screen and (min-width:1000px) {
-    .formSection {
-     padding: 5rem 8rem;
+@media screen and (min-width:400px) {
+.free::after {
+        content: url('./images/squiggle.svg');
+        position: absolute;
+        top: 80%;
+        transform: scale(0.4);
+        left: -55%;
     }
 }
+
+.heroImg {
+    width:100%;
+}
+
+@media screen and (max-width:1000px) {
+    .hero .greenBtn {
+        margin-top:0;
+    }
+}
+
+/* hero wave divider style */
+.hero__wave-divider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.hero__wave-divider svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 72px;
+}
+
+.hero__wave-divider .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+
 .formSection {
-    padding: 5rem 2rem;
+    padding: 5rem 1rem;
     overflow: hidden;
 }
-    
 
+@media screen and (min-width:1000px) {
+    .formSection {
+     padding: 5rem 5rem;
+    }
+}
+
+@media screen and (min-width:1000px) {
     .formSection .left {
-        padding:0px 30px;
+        padding:0px 30px 0px 0px;
     }
+}
 
-        .formList {
-            margin-top: 20px;
-        }
-    
-        .formList li {
-            margin: 30px 0 30px 30px;
-            font-size: 18px;
-            color: var(--darkBlue);
-            position: relative;
-        }
-    
-        .formList .first::before {
-            content: "1";
-            font-size: 36px;
-            margin-right: 8px;
-            color: var(--lightGreen);
-            font-weight: bold;
-            position: absolute;
-            left: -35px;
-            top: -15px;
-        }
-    
-        .formList .second::before {
-            content: "2";
-            font-size: 36px;
-            margin-right: 8px;
-            color: var(--lightGreen);
-            font-weight: bold;
-            position: absolute;
-            left: -35px;
-            top: -15px;
-        }
-    
-        .formList .third::before {
-            content: "3";
-            font-size: 36px;
-            margin-right: 8px;
-            color: var(--lightGreen);
-            font-weight: bold;
-            position: absolute;
-            left: -35px;
-            top: -15px;
-        }
+.greenUnderline {
+    width: 85%;
+    margin-top: 20px;
+}
 
-   .formSection .right {
-        background: #1B4164;
-        padding:2rem;
+.formList {
+    margin-top: 20px;
+}
+
+.formList li {
+    margin: 30px 0 30px 30px;
+    font-size: 18px;
+    color: var(--darkBlue);
+    position: relative;
+}
+
+.formList .first::before {
+    content: "1";
+    font-size: 36px;
+    margin-right: 8px;
+    color: var(--lightGreen);
+    font-weight: bold;
+    position: absolute;
+    left: -35px;
+    top: -15px;
+}
+
+.formList .second::before {
+    content: "2";
+    font-size: 36px;
+    margin-right: 8px;
+    color: var(--lightGreen);
+    font-weight: bold;
+    position: absolute;
+    left: -35px;
+    top: -15px;
+}
+
+.formList .third::before {
+    content: "3";
+    font-size: 36px;
+    margin-right: 8px;
+    color: var(--lightGreen);
+    font-weight: bold;
+    position: absolute;
+    left: -35px;
+    top: -15px;
+}
+
+@media screen and (max-width:1000px) {
+    #formSection .left h3 {
+        text-align:center;
     }
-
-    .formSection .right h2 {
-        color:white;
-        font-size:2rem;
-        max-width:400px;
-        margin:0 auto;
-        text-align: center;
-    }
-    .formSection .right img {
-        margin-left:auto;
-        margin-right:auto;
+    #formSection .left .greenUnderline {
+        margin:10px auto;
         display:block;
     }
 
-    .snappyForm {
-        text-align:center;
-        margin-top:24px;
-        position:relative;
-    }
-
-    .snappyForm input, .snappyForm textarea {
-        width:80%;
-        padding:16px;
-        border-radius:4px;
-        margin:5px 0px;
-        border:none;
-    }
-
-    .snappyForm #email, .snappyForm #phone, .snappyForm #first, .snappyForm #last {
-        width:40%;
+    #formSection .left ul {
+        max-width:400px;
+        margin:0 auto 50px auto;
     }
     
+}
+
+.formSection .right {
+    background: #1B4164;
+    padding: 1rem;
+}
+
+
+@media screen and (min-width:500px) {
+.formSection .right {
+        padding: 2rem;
+    }
+}
+
+.formSection .right h2 {
+    color:white;
+    font-size:2rem;
+    max-width:400px;
+    margin:0 auto;
+    text-align: center;
+}
+.formSection .right img {
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+
+.snappyForm {
+    text-align:center;
+    margin-top:24px;
+    position:relative;
+}
+
+.snappyForm input, .snappyForm textarea {
+    width:90%;
+    padding:16px;
+    border-radius:4px;
+    margin:5px 0px;
+    border:none;
+}
+
+.snappyForm #email,
+.snappyForm #phone,
+.snappyForm #first,
+.snappyForm #last {
+    width: 90%;
+}
+
+@media screen and (min-width:500px) {
+        .snappyForm input,
+            .snappyForm textarea {
+        width: 80%;
+    }
+
+.snappyForm #email,
+.snappyForm #phone,
+.snappyForm #first,
+.snappyForm #last {
+    width: 40%;
+}
+}
+
+
+.snappyForm .greenBtn {
+    background:var(--lightGreen);
+    width:auto;
+    padding:15px 30px;
+    color:white;
+    text-transform:uppercase;
+    font-family:"Manrope", sans-serif;
+    letter-spacing:1px;
+    font-weight:bold;
+    margin-top:16px;
+    font-size:0.6rem;
+    border-radius: 4px;
+}
+
+@media screen and (min-width:500px) {
     .snappyForm .greenBtn {
-        background:var(--lightGreen);
-        width:auto;
-        padding:15px 30px;
-        color:white;
-        text-transform:uppercase;
-        font-family:"Manrope", sans-serif;
-        letter-spacing:1px;
-        font-weight:bold;
-        margin-top:16px;
+        font-size:1rem;
     }
-
-    .snappyForm::after {
-        content:url('./images/arrow.svg');
-        position:absolute;
-        bottom:5px;
-        right:-100px;
-    }
+}
 
 
+@media screen and (min-width:1000px) {
+    .snappyForm.firstForm::after {
+            content: url('./images/arrow.svg');
+            position: absolute;
+            bottom: 5px;
+            right: -120px;
+            transform:scale(0.7);
+        }
+}
 
 footer {
     background:var(--darkBlue);
     padding:40px 0;
     overflow: hidden;
+    position:relative;
+}
+
+footer .flex-container {
+    display:flex;
 }
 
 .footerLeft, .footerRight {
@@ -296,11 +427,47 @@ footer {
     border-left: 1px solid white;
 }
 
+/* footer wave divider style */
+
+.footer__wave-divider {
+    display:none;
+}
+
+@media screen and (min-width:600px) {
+.footer__wave-divider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        display:inline-block;
+    }
+
+    .footer__wave-divider svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 72px;
+    }
+
+    .footer__wave-divider .shape-fill {
+        fill: #FFFFFF;
+    }
+}
+
+
+
+
 
 /* Thank you page */
 
 .hero__thankHeader {
     text-align: center;
+}
+
+.hero.thank__hero {
+    padding-bottom:100px;
 }
 
 .hero__thankText {
@@ -328,6 +495,20 @@ footer {
     text-align:center;
     margin:0 30px;
     padding:20px;
+    box-shadow:0 10px 15px rgba(0,0,0,0.2);
+}
+
+@media screen and (max-width:1000px) {
+    .thankCol {
+        width:400px;
+        margin: 50px auto;
+    }
+}
+@media screen and (max-width:500px) {
+    .thankCol {
+        width: 300px;
+        margin: 50px auto;
+    }
 }
 
 .thankCol img {
@@ -338,12 +519,29 @@ footer {
 .thankCol h4 {
     color:white;
     font-size:1.3rem;
-    margin:20px auto;
+    margin:10px auto;
+}
+
+.left__thank {
+    text-align:center;
 }
 
 .formPhoto {
-    width:100%;
+    width:95%;
 }
+
+@media screen and (min-width:500px) {
+    .formPhoto {
+        width: 500px;
+    }
+}
+
+@media screen and (min-width:1000px) {
+.formPhoto {
+        width: 100%;
+    }
+}
+
  
 .formSection .right__thank  {
     background:white;
@@ -358,6 +556,12 @@ footer {
     content: url('./images/bluearrow.svg');
     position: absolute;
     bottom: -25px;
-    left:30%;
+    left:57%;
     transform:scale(0.5);
+}
+
+.snappyForm.thankForm .greenBtn {
+    display:block;
+    margin:20px auto;
+    position:relative;
 }

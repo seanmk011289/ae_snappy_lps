@@ -57,13 +57,14 @@ h4 {
     color:white;
     font-weight:bold;
     text-decoration:none;
+    display:inlin-block;
 }
 
 /* header */
 
 header {
     text-align:center;
-    padding:40px 0;
+    padding:20px 0 40px 0;
 }
 
 header .logo {
@@ -72,14 +73,23 @@ header .logo {
 
 /* hero */ 
 
-@media screen and (min-width:1000px) {
-    .eventHero .left {
-        padding-right:30px;
-    }
-}
-
 .eventHero {
     position:relative;
+    text-align:center;
+    padding:20px 50px;
+}
+
+.eventHero .left {
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width:1000px) {
+
+    .eventHero .left {
+        padding-right: 30px;
+        text-align: left;
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (min-width:1000px) {
@@ -135,7 +145,7 @@ header .logo {
 .blueBar {
     background:var(--blue);
     position:relative;
-    padding:70px 0;
+    padding:70px 50px;
 }
 
 .blueBar .flex-container {
