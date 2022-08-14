@@ -57,7 +57,7 @@ h4 {
     color:white;
     font-weight:bold;
     text-decoration:none;
-    display:inlin-block;
+    display:inline-block;
 }
 
 /* header */
@@ -76,7 +76,15 @@ header .logo {
 .eventHero {
     position:relative;
     text-align:center;
-    padding:20px 50px;
+    padding:20px;
+}
+
+@media screen and (min-width:500px) {
+    .eventHero {
+        position: relative;
+        text-align: center;
+        padding: 20px 50px;
+    }
 }
 
 .eventHero .left {
@@ -84,7 +92,6 @@ header .logo {
 }
 
 @media screen and (min-width:1000px) {
-
     .eventHero .left {
         padding-right: 30px;
         text-align: left;
@@ -118,8 +125,27 @@ header .logo {
     margin-bottom:20px;
 }
 
+@media screen and (max-width:1000px) {
+    .eventHero h1 {
+        max-width:600px;
+        margin:0 auto 20px auto;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .eventHero h1 {
+        font-size:2.5rem;
+    }
+}
+
 .eventHero h2 {
     margin: 30px 0;
+}
+
+@media screen and (max-width:500px) {
+    .eventHero h2 {
+        font-size:2rem;
+    }
 }
 
 .eventHero h3 {
@@ -142,10 +168,22 @@ header .logo {
 
 /* blue bar */
 
+
 .blueBar {
     background:var(--blue);
     position:relative;
     padding:70px 50px;
+}
+
+@media screen and (max-width:1000px) {
+    .blueBar {
+        text-align:center;
+        padding: 50px 20px;
+    }
+
+    .blueBar .yellowBtn {
+        margin-top:20px;
+    }
 }
 
 .blueBar .flex-container {
@@ -196,6 +234,12 @@ header .logo {
     z-index:0;
 }
 
+@media screen and (max-width:500px) {
+    .eventForm h1 {
+        font-size: 2.5rem;
+    }
+}
+
 .eventForm form {
     max-width:750px;
     margin: 20px auto 0 auto;
@@ -209,8 +253,11 @@ header .logo {
     border:1px solid #e5e5e5;
 }
 
-.eventForm #first, .eventForm #last {
-    width:39%;
+@media screen and (min-width:500px) {
+.eventForm #first,
+    .eventForm #last {
+        width: 39%;
+    }
 }
 
 .eventForm .radioLabel {
